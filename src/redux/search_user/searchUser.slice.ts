@@ -4,7 +4,10 @@ import { fetchUserData } from './searchUser.actions';
 
 export type UserDataState = {
     login: string;
+    name: string;
+    bio: string;
     avatar_url: string;
+    company: string;
     location: string;
     public_repos: string;
     followers: string;
@@ -14,7 +17,10 @@ export type UserDataState = {
 
 const initialState: UserDataState = {
     login: '',
+    name: '',
+    bio: '',
     avatar_url: '',
+    company: '',
     location: '',
     public_repos: '',
     followers: '',
@@ -31,11 +37,15 @@ export const searchUserSlice = createSlice({
             .addCase(fetchUserData.fulfilled, (state: UserDataState, action: PayloadAction<UserDataState>) => {
                 console.log('payload ', action.payload);
                 state.login = action.payload.login
+                state.name = action.payload.name
+                state.bio = action.payload.bio
                 state.avatar_url = action.payload.avatar_url
                 state.public_repos = action.payload.public_repos
                 state.followers = action.payload.followers
                 state.following = action.payload.following
                 state.public_gists = action.payload.public_gists
+                state.company = action.payload.company
+                state.location = action.payload.location
             })
     }
 });
