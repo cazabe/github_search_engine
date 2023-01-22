@@ -5,7 +5,7 @@ export const fetchUserData = createAsyncThunk(
     'searchUser/fetchUserData',
     async (userName: string) => {
         console.log('llamada');
-        const response = await api.get(`/${userName}`)
+        const response = await api.get(`/users/${userName}`)
         return response.data
     }
 )

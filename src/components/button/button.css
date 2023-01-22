@@ -1,0 +1,8 @@
+.btn-icon {
+    font-size: 19px;
+    position: relative;
+    bottom: 28px;
+    right: 15px;
+    float: right;
+    cursor: pointer;
+}
