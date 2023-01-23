@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../store';
-import { fetchUserData } from './searchUser.actions';
-
-export type UserDataState = {
+import { fetchRepositoryData, fetchUserRepositoryData } from './searchRepository.actions';
+export type ProfileDataState = {
     login: string;
     name: string;
     bio: string;
@@ -17,7 +16,7 @@ export type UserDataState = {
     repos_url: string
 };
 
-const initialState: UserDataState = {
+const initialState: ProfileDataState = {
     login: '',
     name: '',
     bio: '',
@@ -32,13 +31,13 @@ const initialState: UserDataState = {
     repos_url: ''
 };
 
-export const searchUserSlice = createSlice({
+export const searchRepositorySlice = createSlice({
     name: 'searchUser',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchUserData.fulfilled, (state: UserDataState, action: PayloadAction<UserDataState>) => {
+            .addCase(fetchRepositoryData.fulfilled, (state: ProfileDataState, action: PayloadAction<ProfileDataState>) => {
                 console.log('payload ', action.payload);
                 state.login = action.payload.login
                 state.name = action.payload.name
@@ -53,13 +52,16 @@ export const searchUserSlice = createSlice({
                 state.hireable = action.payload.hireable
                 state.repos_url = action.payload.repos_url
             })
+            .addCase(fetchUserRepositoryData.fulfilled, () => {
+
+            })
     }
 });
 
 
-export default searchUserSlice.reducer
+export default searchRepositorySlice.reducer
 // Other code such as selectors can use the imported `RootState` type
-export const selectSearchUser = (state: RootState) => {
+export const selectRepository = (state: RootState) => {
     console.log('state on selector ', state)
     return state.searchUser
 
