@@ -39,7 +39,7 @@ export const searchUserSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchUserData.fulfilled, (state: UserDataState, action: PayloadAction<UserDataState>) => {
-                console.log('payload ', action.payload);
+                // console.log('payload ', action.payload);
                 state.login = action.payload.login
                 state.name = action.payload.name
                 state.bio = action.payload.bio

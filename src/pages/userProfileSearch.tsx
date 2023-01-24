@@ -1,7 +1,8 @@
 
+import { useRef } from 'react';
 import { useAppSelector } from '../redux/hooks';
 import { selectSearchUser } from '../redux/search_user/searchUser.slice';
-import SearchInput from '../components/button/button';
+import SearchInput from '../components/searchInput/searchInput';
 import ProfileCard from '../components/profile_card/profileCard';
 import { Row, Col, Card, Nav, Image } from 'react-bootstrap';
 import { BsGithub, BsStack } from 'react-icons/bs';
@@ -10,28 +11,39 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { RiGitRepositoryCommitsFill } from 'react-icons/ri';
 import jobSearching from '../assets/job-searching.svg';
 import { Link } from 'react-router-dom';
+import { useAppDispatch } from '../redux/hooks';
+import { fetchUserData } from '../redux/search_user/searchUser.actions';
+
 const UserProfileSearch = () => {
-    const user = useAppSelector(selectSearchUser)
-    console.log('This is the user', user);
+    const user = useAppSelector(selectSearchUser);
+    // console.log('This is the user', user);
+    const searchRef = useRef<HTMLInputElement>(null);
+
+    const dispatch = useAppDispatch();
+    const searchGithubUser = (e: any) => {
+        e.preventDefault();
+        console.log('the user profile to search ', searchRef.current!.value);
+        dispatch(fetchUserData(searchRef.current!.value));
+    }
     return (
         <>
             <h1>GithHub User Search <BsGithub /></h1>
             <div className='container mt-4'>
-                <SearchInput />
+                <SearchInput inputRef={searchRef} onClick={searchGithubUser} />
                 {user.login !== '' ? (
                     <>
                         <Row>
                             <Col md={3} sm={12}>
-                                <ProfileCard data={user.public_repos} description='Repos' icon={<BsStack />} />
+                                <ProfileCard data={user.public_repos} description='Repos' icon={BsStack} />
                             </Col>
                             <Col md={3} sm={12}>
-                                <ProfileCard data={user.followers} description='Followers' icon={<FiUsers />} />
+                                <ProfileCard data={user.followers} description='Followers' icon={FiUsers} />
                             </Col>
                             <Col md={3} sm={12}>
-                                <ProfileCard data={user.following} description='Following' icon={<FiUserPlus />} />
+                                <ProfileCard data={user.following} description='Following' icon={FiUserPlus} />
                             </Col>
                             <Col md={3} sm={12}>
-                                <ProfileCard data={user.public_gists} description='Gist' icon={<BsGithub />} />
+                                <ProfileCard data={user.public_gists} description='Gist' icon={BsGithub} />
                             </Col>
                         </Row>
                         <Row className='mt-5 mb-5'>

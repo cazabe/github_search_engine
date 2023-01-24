@@ -1,20 +1,19 @@
 
 import { Card } from 'react-bootstrap';
+import { IconType } from 'react-icons/lib';
 import './profileCard.css'
-// import { IconType } from 'react-icons';
 type UserProfileProps = {
     data: string
     description: string
-    icon: any
-    // icon: IconType
+    icon: IconType
 };
-const ProfileCard = ({ data, description, icon }: UserProfileProps) => {
+const ProfileCard = ({ data, description, icon: Icon }: UserProfileProps) => {
     return (
         <div className='container mt-4'>
             <Card className='card-info'>
                 <Card.Body className='mx-auto'>
                     <div className='card-icon'>
-                        {icon}
+                        {<Icon />}
                     </div>
                     <Card.Text className='card-text'>
                         {data}
