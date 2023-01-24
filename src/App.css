@@ -1,3 +1,13 @@
+body {
+  background-color: #071222;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
 .profile-user-card-text {
   text-align: left;
 }
@@ -15,6 +25,27 @@
 ul.bio-list {
   list-style: none;
   padding: 0;
+}
+
+.home-page {
+  overflow: hidden;
+}
+
+.action-btn {
+  font-size: 1.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.action-btn:hover {
+  color: #EB4034;
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {

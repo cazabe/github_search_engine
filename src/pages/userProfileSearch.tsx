@@ -10,6 +10,7 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 import { IoLocationSharp } from 'react-icons/io5';
 import { RiGitRepositoryCommitsFill } from 'react-icons/ri';
 import jobSearching from '../assets/job-searching.svg';
+import oops from '../assets/oops.svg';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../redux/hooks';
 import { fetchUserData } from '../redux/search_user/searchUser.actions';
@@ -92,7 +93,9 @@ const UserProfileSearch = () => {
                         </Row>
                     </>
 
-                ) : <p>There are no repositories, please use the search input to look for new ones and be amaze!</p>}
+                ) : <div><p>There are no users, please use the search input to look for new ones and be amaze!</p>
+                    <Image src={oops} width={245} /></div>
+                }
             </div>
         </>
     )

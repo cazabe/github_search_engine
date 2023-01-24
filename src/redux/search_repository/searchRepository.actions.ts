@@ -6,7 +6,7 @@ export const fetchRepositoryData = createAsyncThunk(
     async (repositoryName: string) => {
         console.log('llamada 1');
         const response = await api.get(`/search/repositories?q=${repositoryName}`)
-        return response.data;
+        return response.data.items;
     }
 );
 
@@ -20,7 +20,7 @@ export const fetchUserRepositoryData = createAsyncThunk(
         const response = await api.get(modifiedUrl[1]);
         console.log('response ', response.data);
 
-        return response.data;
+        return response.data.items;
     }
 );
 
