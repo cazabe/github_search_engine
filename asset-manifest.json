@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.68e353ef.css",
-    "main.js": "/static/js/main.40c2307b.js",
-    "static/js/787.588605fc.chunk.js": "/static/js/787.588605fc.chunk.js",
-    "static/media/job-searching.svg": "/static/media/job-searching.35090850b5af2011f4af6f7ba8ab6260.svg",
-    "static/media/oops.svg": "/static/media/oops.2bae21de7bd1a5a34f796a42415d13c0.svg",
-    "index.html": "/index.html",
-    "static/media/github-mark.svg": "/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
-    "main.68e353ef.css.map": "/static/css/main.68e353ef.css.map",
-    "main.40c2307b.js.map": "/static/js/main.40c2307b.js.map",
-    "787.588605fc.chunk.js.map": "/static/js/787.588605fc.chunk.js.map"
+    "main.css": "/github_search_engine/static/css/main.68e353ef.css",
+    "main.js": "/github_search_engine/static/js/main.3fe222d0.js",
+    "static/js/787.588605fc.chunk.js": "/github_search_engine/static/js/787.588605fc.chunk.js",
+    "static/media/job-searching.svg": "/github_search_engine/static/media/job-searching.35090850b5af2011f4af6f7ba8ab6260.svg",
+    "static/media/oops.svg": "/github_search_engine/static/media/oops.2bae21de7bd1a5a34f796a42415d13c0.svg",
+    "index.html": "/github_search_engine/index.html",
+    "static/media/github-mark.svg": "/github_search_engine/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
+    "main.68e353ef.css.map": "/github_search_engine/static/css/main.68e353ef.css.map",
+    "main.3fe222d0.js.map": "/github_search_engine/static/js/main.3fe222d0.js.map",
+    "787.588605fc.chunk.js.map": "/github_search_engine/static/js/787.588605fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68e353ef.css",
-    "static/js/main.40c2307b.js"
+    "static/js/main.3fe222d0.js"
   ]
 }
