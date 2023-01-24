@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Welcome to GitHub Search Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Please follow this steps to run the app
 
-## Available Scripts
+1) Clone the project to your machine
+2) Navigate to your recently clone folder
+3) Run npm i so alldependencies are ready :)
+4) Run npm start to see the apication
 
-In the project directory, you can run:
+## Home page
 
-### `npm start`
+![image](https://user-images.githubusercontent.com/39498972/214428780-ac108748-f20a-46b8-9ad6-43f735e0dc19.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
+### On the home page you would find two options, one for seraching users and the other to search repositories.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Search user
+![image](https://user-images.githubusercontent.com/39498972/214429783-63ac9370-6bc7-422e-a88c-4cb61b74c449.png)
+### In here you would see a search bar that allows you to type a user Github name and search some info
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Going to user repositories
+### If you what to se that user repositories you can do it by clicking  on the text Watch my repositories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Search repositories
+![image](https://user-images.githubusercontent.com/39498972/214430422-a2d01c2f-50af-4643-ba8c-ee2a181e6751.png)
+### If you what to search for repositories, click the button that said search repositories and type any repositorie you whant to search
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###Hope you enjoy this app :)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
