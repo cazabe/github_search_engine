@@ -53,6 +53,12 @@ ul.bio-list {
   font-size: 2rem;
 }
 
+.counter {
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+}
+
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .user-info {
     right: 17rem;

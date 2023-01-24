@@ -44,6 +44,9 @@ const RepositorySearch = () => {
         <div className='container mt-4'>
             <h1>GitHub Repository Search <BsGithub /></h1>
             <SearchInput inputRef={searchRef} onClick={searchGithubRepos} />
+            <div className='counter'>
+                <span>Count: {repos.data.length} Github Repositories</span>
+            </div>
             <Row>
                 {repos.data.map((repo) => {
                     var randomColor = Math.floor(Math.random() * 16777215).toString(16);
