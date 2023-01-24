@@ -58,9 +58,7 @@ export const searchUserSlice = createSlice({
 
 
 export default searchUserSlice.reducer
-// Other code such as selectors can use the imported `RootState` type
 export const selectSearchUser = (state: RootState) => {
-    console.log('state on selector ', state)
     return state.searchUser
 
 }

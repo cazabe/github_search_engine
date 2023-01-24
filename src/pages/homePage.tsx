@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div className="home-page mt-4">
             <h1>Welcome To GitHub Search Engine</h1>
-            <h3>Search users or repositories around the world an be inspired</h3>
+            <h3>Search users or repositories around the world an be inspired!</h3>
             <Row className="mt-4">
                 <Col md={6} sm={12} className='btn-info'>
                     <Link to='/user-profile' className="action-btn mt-4">

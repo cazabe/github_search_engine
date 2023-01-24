@@ -4,23 +4,27 @@ import api from '../../api';
 export const fetchRepositoryData = createAsyncThunk(
     'searchRepository/fetchRepositoryData',
     async (repositoryName: string) => {
-        console.log('llamada 1');
-        const response = await api.get(`/search/repositories?q=${repositoryName}`)
-        return response.data.items;
+        try {
+            const response = await api.get(`/search/repositories?q=${repositoryName}`)
+            return response.data.items;
+        } catch (error) {
+            return null;
+        }
     }
 );
 
 export const fetchUserRepositoryData = createAsyncThunk(
     'searchRepository/fetchUserRepositoryData',
     async (repositoryUrl: string) => {
-        console.log('llamada 2');
         const modifiedUrl = repositoryUrl.split('https://api.github.com');
-        console.log('modified url ', modifiedUrl[1]);
+        try {
+            const response = await api.get(modifiedUrl[1]);
+            return response.data;
 
-        const response = await api.get(modifiedUrl[1]);
-        console.log('response ', response.data);
+        } catch (error) {
+            return null;
+        }
 
-        return response.data.items;
     }
 );
 

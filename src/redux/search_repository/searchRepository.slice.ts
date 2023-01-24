@@ -19,8 +19,6 @@ export const searchRepositorySlice = createSlice({
                 state.data = action.payload
             })
             .addCase(fetchUserRepositoryData.fulfilled, (state: userRepoDataState, action: any) => {
-                console.log('payload ', action.payload);
-                console.log('payload ', action.payload);
                 state.data = action.payload
             })
     }
@@ -30,7 +28,6 @@ export const searchRepositorySlice = createSlice({
 export default searchRepositorySlice.reducer
 // Other code such as selectors can use the imported `RootState` type
 export const selectRepository = (state: RootState) => {
-    console.log('state on selector ', state)
     return state.repositories
 
 }

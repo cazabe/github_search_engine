@@ -19,11 +19,12 @@ const UserProfileSearch = () => {
     const user = useAppSelector(selectSearchUser);
     // console.log('This is the user', user);
     const searchRef = useRef<HTMLInputElement>(null);
-
     const dispatch = useAppDispatch();
+    if (user == null) {
+        return alert('there was a problem with your request, please try again later');
+    }
     const searchGithubUser = (e: any) => {
         e.preventDefault();
-        console.log('the user profile to search ', searchRef.current!.value);
         dispatch(fetchUserData(searchRef.current!.value));
     }
     return (
@@ -84,7 +85,6 @@ const UserProfileSearch = () => {
                                         </Card.Body>
                                     </Card> : <Card>
                                         <Card.Body>
-                                            <Card.Title>This user is looking for a job, be the first to reach out.</Card.Title>
                                             <Image src={jobSearching} width={245} />
                                         </Card.Body>
                                     </Card>
@@ -93,8 +93,8 @@ const UserProfileSearch = () => {
                         </Row>
                     </>
 
-                ) : <div><p>There are no users, please use the search input to look for new ones and be amaze!</p>
-                    <Image src={oops} width={245} /></div>
+                ) : <div><p className='text-info-style'>There are no users; please use the search input to look for new ones and be amaze!</p>
+                    <Image src={oops} width={300} /></div>
                 }
             </div>
         </>
